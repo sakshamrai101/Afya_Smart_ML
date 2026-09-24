@@ -1,34 +1,51 @@
-# Afya Smart_ML Project
+# Afya Smart ML
 
-## Overview
-The Afya Smart_ML Project is designed to optimize the e-consultation process for Primary Care Providers (PCPs) on the AfyaChat platform, leveraging GPT-3.5 Turbo for AI-driven insights. We streamline consultations, augment them for comprehensive submissions to specialists, and ensure compliance with best-practice guidelines.
+A clinician uploads an eConsult note. The app checks it against medical-record documentation guidelines, drafts the questions a specialist still needs, and proposes next steps the clinician rates before anything moves forward.
 
-## Getting Started
-To begin using the Smart_ML application for enhancing e-consultations, just do:
+Built for the AfyaChat workflow used by primary care providers (PCPs) and specialists. Short referral notes often omit history, medications, allergies, and exam findings. This prototype surfaces those gaps before the consult is sent.
 
-**Running the Application:**
-   - Start the server with `run.py`:
-     ```sh
-     python run.py
-     ```
-   - Access the application at `localhost` on your web browser.
+## What a user does
 
-## Features
-- **User Authentication:** Secure login for PCPs with SQL-Lite database integration.
-- **E-Consult File Handling:** Upload and analyze e-consult text files.
-- **AI-Driven Workflow:** AI model scans for missing information, generates targeted questions, and offers evidence-based recommendations.
-- **Real-Time Notifications:** Utilize Twilio service for immediate alerts.
+1. Sign in as a PCP or a specialist (SQLite).
+2. Open a reference case (bone fracture, oral surgery, pneumonia) or upload an eConsult text file.
+3. **Missing information.** The note is compared with Community First Health Plans documentation guidelines. The PCP gets a checklist, can add notes, and receives the list by SMS (Twilio).
+4. **Targeted questions.** Three to four specialist-facing questions are drafted from the same note and guidelines.
+5. **Recommendations.** Suggestions cover diagnostic testing, medication, and patient education. The clinician scores them on clinical soundness, likelihood of harm, relevance, completeness, and helpfulness.
 
-## Components
-- `app/`: Main application code including Flask routes and HTML templates.
-- `static/`: CSS and JavaScript files for UI.
-- `data/`: Data files used by the application.
-- `tests/`: Unit tests for validating application functionality.
+The operations screen unlocks each step only after the previous one is done.
 
+## How it works
 
+Guideline text and the consult note are sent together to GPT-3.5 Turbo. Nothing is fine-tuned. The model is asked for a bounded output: the top missing items, a short question list, or three recommendation types. The clinician edits and rates the result; the model does not file the consult.
 
-## Security
-The application includes robust security features, such as secure data transmission and authentication, ensuring the confidentiality and integrity of e-consultation data.
+`app/starter.py` is a separate LlamaIndex prototype. It indexes a local document folder and answers a clinical query. It is not called from the Flask routes yet.
 
-## Feedback
-Your feedback is valuable to us. Please submit any feedback or issues through the GitHub Issues section of this repository.
+## Where to read the code
+
+| Question | File |
+| --- | --- |
+| Login, upload, and the three clinical routes | `app/routes.py` |
+| Missing-information prompt and checklist parsing | `app/userstory1.py` |
+| Specialist question prompt | `app/userstory2.py` |
+| Recommendation prompt | `app/userstory3.py` |
+| Clinician rating form | `app/templates/recommendations.html` |
+| Retrieval prototype | `app/starter.py` |
+| Sample consults | `app/data_econsult/` |
+
+## Run
+
+```sh
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python run.py
+```
+
+Open [http://127.0.0.1:4444](http://127.0.0.1:4444).
+
+Put `OPENAI_API_KEY`, and the Twilio `ACCOUNT_SID`, `AUTH_TOKEN`, `TWILIO_NUMBER`, and `TARGET_NUMBER`, in `config.py` on your machine. Do not commit that file.
+
+Stack: Python, Flask, OpenAI, SQLite, Twilio, LlamaIndex, pytest, Selenium.
+
+## Scope
+
+This is a decision-support prototype. It does not diagnose, prescribe, or replace specialist review. Sample notes are for development only.

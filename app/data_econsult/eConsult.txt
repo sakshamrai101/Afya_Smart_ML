@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-Patient Name: Michael Brown
-Date of Birth: 03/18/1978
-Date of Visit: 07/15/2023
-Chief Complaint: Lower back pain
-
-History of Present Illness:
-Mr. Brown presents today with complaints of lower back pain that started a week ago after lifting heavy furniture. He describes the pain as dull and achy, radiating down his left leg. He reports no numbness or tingling in his legs.
-
-Past Medical History:
-- Degenerative disc disease
-
-Medications:
-- Naproxen 500mg twice daily as needed for pain
-=======
 Patient Name: Sarah Johnson
 Date of Birth: 05/15/1980
 Date of Visit: 04/10/2023
@@ -30,24 +15,12 @@ Medications:
 Family History:
 - Father: Hypertension
 - Mother: Hyperlipidemia
->>>>>>> 68b112c0553532ec24ccfb96c043d49546e61c15
 
 Social History:
 - Non-smoker
 - Occasional alcohol use
 
 Physical Exam:
-<<<<<<< HEAD
-- General: Appears uncomfortable due to pain
-- Vital Signs: BP 120/80, HR 80, RR 16, Temp 98.6°F
-- Musculoskeletal: Decreased range of motion and tenderness over the lumbar spine, positive straight leg raise test on the left
-
-Assessment and Plan:
-1. Order lumbar spine X-ray
-2. Prescribe muscle relaxants for pain relief
-3. Refer to physical therapy for strengthening exercises
-4. Schedule follow-up appointment in 2 weeks for reevaluation
-=======
 - Left leg: Obvious deformity and tenderness over the left knee, limited range of motion
 - Vital Signs: BP 120/80, HR 80, RR 16, Temp 98.6°F
 
@@ -56,36 +29,21 @@ Assessment and Plan:
 2. Immobilize the left leg with a splint
 3. Prescribe pain medication and advise rest
 4. Schedule follow-up appointment in 1 week for reassessment
->>>>>>> 68b112c0553532ec24ccfb96c043d49546e61c15
 
+Missing list
 
- Missing list 
-
-<<<<<<< HEAD
-1. **Personal Data**: The patient's address, employer, home and work telephone numbers, and marital status are missing.
-2. **Allergies**: There is no mention of any medication allergies or adverse reactions, which should be prominently noted in the record.
-3. **Problem List**: While the patient's degenerative disc disease is mentioned in the past medical history, a separate list of chronic/significant problems should be maintained for patients seen three or more times.
-4. **Advance Directive**: There is no documentation regarding whether or not the patient has executed an advance directive, which is required for Medicaid adults aged 18 and older.
-5. **Author Signature**: There is no signature by the author/performing provider on the assessment and plan, as per the documentation guidelines.
-=======
 1. Allergies: There is no mention of any medication allergies or adverse reactions in the patient's data. This information is important for ensuring the safety of any prescribed medications.
 2. Personal Data: While the patient's date of birth is provided, there is missing information such as address, employer, and emergency contacts. This information is important for contacting the patient in case of emergency or for follow-up purposes.
 3. Past Medical History: The patient's past medical history is listed as "None" in the data provided. It is important to have a detailed past medical history including serious accidents, operations, and illnesses to provide comprehensive care.
 4. Medication List: The patient's medication list is noted as "None" in the data. It is important to document any current medications, even if the patient is not currently taking any, to have a complete picture of their medical history.
 5. Advance Directive: There is no mention of whether the patient has executed an advance directive in the provided data. This information is important for understanding the patient's preferences for medical care in case they are incapacitated.
 
-
-
-
- Recommendations 
-
-Recommendations:
+Recommendations
 
 Diagnostic Testing:
 1. X-ray of the left knee to confirm the diagnosis of a possible fracture in the left leg.
 2. Doppler ultrasound to rule out deep vein thrombosis (DVT) given the patient's complaints of leg pain and swelling.
 3. Complete blood count (CBC) to rule out any signs of infection or abnormality in the blood related to the injury.
->>>>>>> 68b112c0553532ec24ccfb96c043d49546e61c15
 
 Medication Recommendation:
 1. Prescribe nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen for pain relief and to reduce inflammation.
